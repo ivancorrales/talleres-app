@@ -1,5 +1,6 @@
 package es.fplumara.dam1.talleres.service.impl;
 
+import es.fplumara.dam1.talleres.dto.ActualizarTallerDTO;
 import es.fplumara.dam1.talleres.dto.CrearTallerDTO;
 import es.fplumara.dam1.talleres.exception.DatosTallerException;
 import es.fplumara.dam1.talleres.model.EstadoInscripcion;
@@ -45,5 +46,20 @@ public class TallerServiceImpl implements TallerService {
     @Override
     public Taller obtenerTaller(Long id) {
         return null;
+    }
+
+    @Override
+    public Taller atualizarTaller(Long id, ActualizarTallerDTO dto) {
+        return null;
+    }
+
+    @Override
+    public Taller cambiarEstadoTaller(Long id, EstadoInscripcion estadoInscripcion) {
+        return null;
+    }
+
+    @Override
+    public void eliminarTaller(Long id) {
+
     }
 }
