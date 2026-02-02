@@ -17,11 +17,11 @@ public class Inscripcion {
         this.fechaIncripcion = fechaIncripcion;
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(long contarId) {
         this.id = id;
     }
 
