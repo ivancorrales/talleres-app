@@ -42,17 +42,9 @@ public class InMemoryInscripcionRepository implements InscripcionRepository {
 
     @Override
     public Inscripcion findByTallerIdAndUsuarioId(Long tallerId, Long usuarioId) {
-        /**
+
         String inscripcionId = tallerId.toString()+"/"+usuarioId.toString();
-        return inscripciones.get(inscripcionId);
-         **/
-        for (Inscripcion inscripcionesId : listaId.values()) {
-            if (inscripcionesId.getUsuarioId().equals(usuarioId) && inscripcionesId.getTallerId().equals(tallerId)) {
-                return inscripcionesId;
-            }
-        }
-        /** Aqui tendria que devolver algo o no? **/
-        return inscripcionesAlmacenados.get(inscripcionesId);
+        return Inscripcion.get(inscripcionId);
 
     }
 
@@ -89,12 +81,17 @@ public class InMemoryInscripcionRepository implements InscripcionRepository {
     @Override
     public Inscripcion deleteById(Long id) {
         inscripcionesAlmacenados.remove(id);
+        if (listaId.containsKey(id)) {
+            listaId.remove(id);
+        }
         return null;
     }
 
     @Override
     public Inscripcion deleteByTallerIdAndUsuarioId(Long tallerId, Long usuarioId) {
-
+        for (Inscripcion inscripcion : listaId.values()) {
+            listaId.remove(inscripcion.getId());
+        }
         return null;
     }
 }

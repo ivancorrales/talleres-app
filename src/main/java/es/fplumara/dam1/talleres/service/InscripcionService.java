@@ -6,6 +6,7 @@ import java.util.List;
 
 public interface InscripcionService {
 
+<<<<<<< HEAD
     Inscripcion inscribirUsuario(Long tallerid, Long usuarioid, String rol);
 
     Inscripcion cambiarRol (Long tallerid, Long usuarioid, String nuevoRol);
@@ -23,4 +24,6 @@ public interface InscripcionService {
 
 
 
+=======
+>>>>>>> 142ea6a (Avance-Implementaciones-DTOs)
 }

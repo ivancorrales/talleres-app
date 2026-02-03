@@ -41,21 +41,24 @@ public class TallerServiceImpl implements TallerService {
 
     @Override
     public List<Taller> listarTalleres() {
+
         return List.of();
     }
 
     @Override
     public Taller obtenerTaller(Long id) {
+
         return null;
     }
 
     @Override
-    public Taller atualizarTaller(Long id, ActualizarTallerDTO dto) {
+    public Taller actualizarTaller(Long id, ActualizarTallerDTO dto) {
         return null;
     }
 
     @Override
     public Taller cambiarEstadoTaller(Long id, EstadoInscripcion estadoInscripcion) {
+
         return null;
     }
 
