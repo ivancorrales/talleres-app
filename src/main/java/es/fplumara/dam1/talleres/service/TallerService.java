@@ -19,5 +19,5 @@ public interface TallerService {
 
     Taller cambiarEstadoTaller(Long id, EstadoInscripcion estadoInscripcion);
 
-    void eliminarTaller(Long id);
+    Taller eliminarTaller(Long id);
 }
