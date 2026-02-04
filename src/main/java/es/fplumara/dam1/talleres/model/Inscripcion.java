@@ -17,6 +17,7 @@ public class Inscripcion {
         this.fechaIncripcion = fechaIncripcion;
     }
 
+
     public Long getId() {
         return id;
     }

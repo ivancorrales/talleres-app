@@ -14,7 +14,6 @@ public class InMemoryInscripcionRepository implements InscripcionRepository {
 
     private long contarId;
 
-
     public InMemoryInscripcionRepository() {
 
         this.inscripcionesAlmacenados = new HashMap<>();
@@ -53,7 +52,7 @@ public class InMemoryInscripcionRepository implements InscripcionRepository {
             }
         }
         /** Aqui tendria que devolver algo o no? **/
-        return null;
+        return inscripcionesAlmacenados.get(inscripcionesId);
 
     }
 
@@ -90,9 +89,6 @@ public class InMemoryInscripcionRepository implements InscripcionRepository {
     @Override
     public Inscripcion deleteById(Long id) {
         inscripcionesAlmacenados.remove(id);
-        if (listaId.isEmpty()) {
-            inscripcionesAlmacenados.remove(id);
-        }
         return null;
     }
 
