@@ -20,7 +20,4 @@ public interface InscripcionService {
 
     Inscripcion verResponsables(Long tallerid);
 
-
-
-
 }
