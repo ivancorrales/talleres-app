@@ -93,15 +93,18 @@ public class UsuarioServiceImpl implements UsuarioService {
     }
 
     @Override
-    public Usuario eliminarUsuario(Long id) {
-        if (!UserRepository.existsById(id)) {
+    public DeleteSummaryDTO eliminarUsuario(Long idUsuario) {
+        Usuario user = UserRepository.findById(idUsuario);
+        if () {
             throw new DatosUsuarioServiceException("No existe el usuario");
         }
 
         List<Inscripcion> obtenerInscripciones = inscriptionRepository.findByUserId(id);
-        obtenerInscripciones.remove(inscriptionRepository.findByUserId(id));
-        UserRepository.deleteById(id);
+        for (Inscripcion inscripcion : obtenerInscripciones) {
+            inscripcionRepository.deleteById(inscripcion.getId());
+        }
+        userRepository.deleteById(idUsuario);
 
-        return new DeleteSummaryDTO();
+        return new DeleteSummaryDTO(obtenerInscripciones.size());
     }
 }

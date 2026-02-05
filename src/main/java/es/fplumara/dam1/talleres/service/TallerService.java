@@ -2,6 +2,7 @@ package es.fplumara.dam1.talleres.service;
 
 import es.fplumara.dam1.talleres.dto.ActualizarTallerDTO;
 import es.fplumara.dam1.talleres.dto.CrearTallerDTO;
+import es.fplumara.dam1.talleres.dto.DeleteSummaryDTO;
 import es.fplumara.dam1.talleres.model.EstadoInscripcion;
 import es.fplumara.dam1.talleres.model.Taller;
 
@@ -19,5 +20,5 @@ public interface TallerService {
 
     Taller cambiarEstadoTaller(Long id, EstadoInscripcion estadoInscripcion);
 
-    void eliminarTaller(Long id);
+    DeleteSummaryDTO eliminarTaller(Long id);
 }
