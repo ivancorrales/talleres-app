@@ -4,6 +4,7 @@ import es.fplumara.dam1.talleres.repository.UserRepository;
 import es.fplumara.dam1.talleres.model.Usuario;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class InMemoryUserRepository implements UserRepository {
@@ -54,6 +55,16 @@ public class InMemoryUserRepository implements UserRepository {
     @Override
     public void deleteById(Long id) {
         usuarios.remove(id);
+    }
+
+    @Override
+    public List<Usuario> findAll() {
+        return List.of();
+    }
+
+    @Override
+    public boolean existsById(Long id) {
+        return false;
     }
 
 }
