@@ -13,9 +13,9 @@ public interface InscripcionRepository {
 
     List<Inscripcion> findByTallerIdAndUsuarioId(Long tallerId, Long usuarioId);
 
-    Inscripcion findByTallerId(Long tallerId);
+    List<Inscripcion> findByTallerId(Long tallerId);
 
-    Inscripcion findByUserId(Long userId);
+    List<Inscripcion> findByUserId(Long userId);
 
     Inscripcion findByTallerIdAndRol(Long tallerId, Long rol);
 

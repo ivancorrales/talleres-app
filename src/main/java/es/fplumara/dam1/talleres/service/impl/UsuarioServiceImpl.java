@@ -110,13 +110,17 @@ public class UsuarioServiceImpl implements UsuarioService {
             throw new DatosEliminarUsuarioServiceException("El usuario no fue encontrado");
         }
 
-        List<Inscripcion> inscripcions = inscripcionRepository.findByUserId(idUsuario);
-        for (Inscripcion inscripcion : inscripcions) {
+        // Busca las inscripciones del usuario con id idUsuario
+        List<Inscripcion> inscripciones = inscripcionRepository.findByUserId(idUsuario);
+
+        // Eliminamos todas las inscripcions del usuario con id idUsuario
+        for (Inscripcion inscripcion : inscripciones) {
             inscripcionRepository.deleteById(inscripcion.getId());
         }
 
-        userRepository.deleteById((long) idUsuario.intValue());
+        // Eliminamos el usuario
+        userRepository.deleteById(idUsuario);
 
-        return new DeleteSummaryDTO(inscripcions.size());
+        return new DeleteSummaryDTO(inscripciones.size());
     }
 }
