@@ -1,6 +1,5 @@
 package es.fplumara.dam1.talleres.model;
 
-
 /**
  * - **id**
  *
@@ -26,6 +25,7 @@ package es.fplumara.dam1.talleres.model;
  *
  *     Correo electrónico del usuario
  */
+
 public class Usuario {
 
     private Long id;
@@ -51,6 +51,10 @@ public class Usuario {
         this.discordUserId = discordUserId;
         this.curso = curso;
         this.email = email;
+    }
+
+    public Usuario(String nombre, Perfil perfil, String discodUserId, String curso, String email) {
+
     }
 
     public Long getId() {
