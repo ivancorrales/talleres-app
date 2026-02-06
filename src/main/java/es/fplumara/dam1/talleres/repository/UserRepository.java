@@ -6,7 +6,7 @@ public interface UserRepository {
 
     Usuario save(Usuario usuario);
 
-    Usuario findById(Long id);
+    Usuario findById(Long usuarioid);
 
     Usuario findByEmail(String email);
 
