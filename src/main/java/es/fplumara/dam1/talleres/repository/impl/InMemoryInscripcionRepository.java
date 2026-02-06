@@ -82,7 +82,11 @@ public class InMemoryInscripcionRepository implements InscripcionRepository {
 
     @Override
     public Inscripcion findByTallerIdAndRol(Long tallerId, Long rol) {
-
+        for (Inscripcion inscripcion : listaId.values()) {
+            if (inscripcion.getTallerId().equals(tallerId) && inscripcion.getRol().equals(rol)) {
+                return inscripcion;
+            }
+        }
         return null;
     }
 

@@ -1,5 +1,7 @@
 package es.fplumara.dam1.talleres.dto;
 
+import es.fplumara.dam1.talleres.model.EstadoInscripcion;
+
 public class CrearTallerDTO {
 
     private String titulo;
@@ -38,7 +40,7 @@ public class CrearTallerDTO {
         this.descripcion = descripcion;
     }
 
-    public String getEstadoInscripcion() {
+    public EstadoInscripcion getEstadoInscripcion() {
         return estadoInscripcion;
     }
 

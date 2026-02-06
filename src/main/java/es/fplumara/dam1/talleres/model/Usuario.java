@@ -53,6 +53,10 @@ public class Usuario {
         this.email = email;
     }
 
+    public Usuario(String nombre, Perfil perfil, String discodUserId, String curso, String email) {
+
+    }
+
     public Long getId() {
         return id;
     }
