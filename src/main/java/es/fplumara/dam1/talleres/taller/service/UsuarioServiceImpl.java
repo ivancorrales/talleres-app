@@ -1,4 +1,4 @@
-package es.fplumara.dam1.talleres.service.impl;
+package es.fplumara.dam1.talleres.taller.service;
 
 import es.fplumara.dam1.talleres.dto.ActualizarUsuarioDTO;
 import es.fplumara.dam1.talleres.dto.CrearUsuarioDTO;
@@ -14,7 +14,6 @@ import es.fplumara.dam1.talleres.repository.UserRepository;
 import es.fplumara.dam1.talleres.service.UsuarioService;
 
 import java.util.List;
-import java.util.Map;
 
 public class UsuarioServiceImpl implements UsuarioService {
 

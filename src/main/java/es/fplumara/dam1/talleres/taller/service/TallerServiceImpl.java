@@ -1,4 +1,4 @@
-package es.fplumara.dam1.talleres.service.impl;
+package es.fplumara.dam1.talleres.taller.service;
 
 import es.fplumara.dam1.talleres.dto.ActualizarTallerDTO;
 import es.fplumara.dam1.talleres.dto.CrearTallerDTO;
