@@ -3,10 +3,7 @@ package es.fplumara.dam1.talleres.repository.impl;
 import es.fplumara.dam1.talleres.repository.InscripcionRepository;
 import es.fplumara.dam1.talleres.model.Inscripcion;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class InMemoryInscripcionRepository implements InscripcionRepository {
 
@@ -59,25 +56,26 @@ public class InMemoryInscripcionRepository implements InscripcionRepository {
     }
 
     @Override
-    public Inscripcion findByTallerId(Long tallerId) {
-
+    public List<Inscripcion> findByTallerId(Long tallerId) {
+        List<Inscripcion> inscripciones = new ArrayList<>();
         for (Inscripcion inscripcion : listaId.values()) {
             if (inscripcion.getTallerId().equals(tallerId)) {
-                return inscripcion;
+                inscripciones.add(inscripcion);
             }
         }
-        return null;
+        return inscripciones;
     }
 
     @Override
-    public Inscripcion findByUserId(Long userId) {
-
+    public List<Inscripcion> findByUserId(Long userId) {
+        List<Inscripcion> inscripciones = new ArrayList<>();
         for (Inscripcion inscripcion : listaId.values()) {
             if (inscripcion.getUsuarioId().equals(userId)) {
-                return inscripcion;
+                inscripciones.add(inscripcion);
             }
         }
-        return null;
+
+        return inscripciones;
     }
 
     @Override
