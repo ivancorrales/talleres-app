@@ -3,25 +3,25 @@ package es.fplumara.dam1.talleres.model;
 import java.time.LocalDate;
 
 public class Inscripcion {
-    private String id;
+    private Long id;
     private Long tallerId;
     private Long usuarioId;
     private String rol;
     private LocalDate fechaIncripcion;
 
-    public Inscripcion(Long tallerId, Long usuarioId, String rol, LocalDate fechaIncripcion) {
-        this.id = tallerId.toString()+"/"+usuarioId.toString();
+    public Inscripcion(Long id, Long tallerId, Long usuarioId, String rol, LocalDate fechaIncripcion) {
+        this.id = id;
         this.tallerId = tallerId;
         this.usuarioId = usuarioId;
         this.rol = rol;
         this.fechaIncripcion = fechaIncripcion;
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
