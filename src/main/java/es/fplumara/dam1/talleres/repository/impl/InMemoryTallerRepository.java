@@ -40,8 +40,6 @@ public class InMemoryTallerRepository  implements TallerRepository {
             listaTalleres.add(taller);
         }
         return listaTalleres;
-        //return new ArrayList<>(talleres.values());
-        //return talleres.values().stream().collect(Collectors.toList());
     }
 
     @Override
